@@ -2,53 +2,57 @@
 
 > Easy interface to fork one or more repositories on GitHub.
 
-## Installation
-
+## :cloud: Installation
+    
 ```sh
 $ npm i --save fork-me
 ```
 
-## Example
+            
+## :clipboard: Example
+
+        
 
 ```js
-const forkMe = require("fork-me");
+const ghDelete = require("fork-me");
 
-forkMe("jxmono", "jxoss", "9a181738044f3e3014c537f6562b756f047565dc", function (err, data) {
+// Delete all the repositories owned by @ghost
+ghDelete("ghost", "your token", (err, data) => {
     console.log(err || "Done");
-}).on("fork-success", data => {
-    console.log(`Forked ${data.source.full_name} into ${data.full_name}`);
-}).on("fork-error", (err, c) => {
-    console.log(`Failed to fork ${c.source.full_name}. Error: ${err}`);
+}).on("repo-success", (data, repo) => {
+    console.log(`Deleted ${repo.full_name}`);
+}).on("repo-error", (err, data) => {
+    console.log(`Failed to delete ${data.full_name}.`, err);
 });
 ```
-
-## Documentation
-
-### `forkMe(what, where, token, cb)`
-Forks the specified repositories in a known account.
+    
+## :memo: Documentation
+        
+### `ghDelete(what, where, token, cb)`
+Deletes the specified repositories in a specified account.
 
 #### Params
-- **String** `what`: If a GitHub owner (user or organization) is provided, all accesible repositories will be forked. If a repository full name is provided, only that specific repository will be forked.
+- **String** `what`: If a GitHub owner (user or organization) is provided, all accesible repositories will be deleted. If a repository full name is
+provided, only that specific repository will be deleted.
 - **String** `where`: The account name where to fork the repositories (your username or an organization).
 - **String** `token`: The GitHub token.
 - **Function** `cb`: The callback function.
 
 #### Return
 - **EventEmitter** An `EventEmitter` instance emitting the following events:
- - `fork-error` (err, repo): Emitted if the forking process failed for a specific repository.
- - `fork-success` (data, repo): Emitted when a repository failed to be forked.
- - `progress` (err, data): Emitted after trying to fork a repository (if it was a success, the error will be `null`).
+ - `repo-error` (err, repo): Emitted if the request failed for a specific repository.
+ - `repo-success` (data, repo): Emitted the request is successful.
+ - `repo-progress` (err, data): Emitted running the request to a repository (if it was a success, the error will be `null`).
+ - `done` (err, data): Emitted after all the requests are executed.
 
-## How to contribute
+        
+## :yum: How to contribute
 Have an idea? Found a bug? See [how to contribute][contributing].
 
-## Where is this library used?
-If you are using this library in one of your projects, add it in this list. :sparkles:
-
-## License
-
+## :scroll: License
+    
 [MIT][license] © [Ionică Bizău][website]
-
+    
 [paypal-donations]: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RVXDDLKKLQRJW
 [donate-now]: http://i.imgur.com/6cMbHOC.png
 
