@@ -1,9 +1,10 @@
-const forkMe = require("../lib");
+const ghDelete = require("../lib");
 
-forkMe("jxmono", "jxoss", "9a181738044f3e3014c537f6562b756f047565dc", function (err, data) {
+// Delete all the repositories owned by @ghost
+ghDelete("ghost", "your token", (err, data) => {
     console.log(err || "Done");
-}).on("fork-success", data => {
-    console.log(`Forked ${data.source.full_name} into ${data.full_name}`);
-}).on("fork-error", (err, c) => {
-    console.log(`Failed to fork ${c.source.full_name}. Error: ${err}`);
+}).on("repo-success", (data, repo) => {
+    console.log(`Deleted ${repo.full_name}`);
+}).on("repo-error", (err, data) => {
+    console.log(`Failed to delete ${data.full_name}.`, err);
 });
