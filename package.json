@@ -1,0 +1,28 @@
+{
+  "name": "fork-me",
+  "version": "1.0.0",
+  "description": "Easy interface to fork one or more repositories on GitHub.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fork",
+    "github",
+    "repository"
+  ],
+  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+  "license": "MIT",
+  "dependencies": {
+    "gh-repeat": "^1.0.0",
+    "same-time": "^2.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/IonicaBizau/fork-me.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IonicaBizau/fork-me/issues"
+  },
+  "homepage": "https://github.com/IonicaBizau/fork-me#readme"
+}
