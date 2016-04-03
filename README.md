@@ -14,10 +14,10 @@ $ npm i --save gh-destroy
         
 
 ```js
-const ghDelete = require("gh-destroy");
+const ghDestroy = require("gh-destroy");
 
 // Delete all the repositories owned by @ghost
-ghDelete("ghost", "your token", (err, data) => {
+ghDestroy("ghost", "your token", (err, data) => {
     console.log(err || "Done");
 }).on("repo-success", (data, repo) => {
     console.log(`Deleted ${repo.full_name}`);
@@ -28,7 +28,7 @@ ghDelete("ghost", "your token", (err, data) => {
     
 ## :memo: Documentation
         
-### `ghDelete(what, where, token, cb)`
+### `ghDestroy(what, where, token, cb)`
 Deletes the specified repositories in a specified account.
 
 #### Params
