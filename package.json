@@ -1,5 +1,5 @@
 {
-  "name": "fork-me",
+  "name": "gh-destroy",
   "version": "1.0.0",
   "description": "Delete multiple GitHub repositories.",
   "main": "lib/index.js",
@@ -19,10 +19,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/IonicaBizau/fork-me.git"
+    "url": "git+ssh://git@github.com/IonicaBizau/gh-destroy.git"
   },
   "bugs": {
-    "url": "https://github.com/IonicaBizau/fork-me/issues"
+    "url": "https://github.com/IonicaBizau/gh-destroy/issues"
   },
-  "homepage": "https://github.com/IonicaBizau/fork-me#readme"
+  "homepage": "https://github.com/IonicaBizau/gh-destroy#readme"
 }

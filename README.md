@@ -1,11 +1,11 @@
-# fork-me [![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donations] [![Version](https://img.shields.io/npm/v/fork-me.svg)](https://www.npmjs.com/package/fork-me) [![Downloads](https://img.shields.io/npm/dt/fork-me.svg)](https://www.npmjs.com/package/fork-me) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
+# gh-destroy [![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donations] [![Version](https://img.shields.io/npm/v/gh-destroy.svg)](https://www.npmjs.com/package/gh-destroy) [![Downloads](https://img.shields.io/npm/dt/gh-destroy.svg)](https://www.npmjs.com/package/gh-destroy) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
 
 > Delete multiple GitHub repositories.
 
 ## :cloud: Installation
     
 ```sh
-$ npm i --save fork-me
+$ npm i --save gh-destroy
 ```
 
             
@@ -14,7 +14,7 @@ $ npm i --save fork-me
         
 
 ```js
-const ghDelete = require("fork-me");
+const ghDelete = require("gh-destroy");
 
 // Delete all the repositories owned by @ghost
 ghDelete("ghost", "your token", (err, data) => {
