@@ -1,6 +1,6 @@
 {
   "name": "gh-destroy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Delete multiple GitHub repositories.",
   "main": "lib/index.js",
   "scripts": {
@@ -24,5 +24,16 @@
   "bugs": {
     "url": "https://github.com/IonicaBizau/gh-destroy/issues"
   },
-  "homepage": "https://github.com/IonicaBizau/gh-destroy#readme"
+  "homepage": "https://github.com/IonicaBizau/gh-destroy#readme",
+  "files": [
+    "bin/",
+    "app/",
+    "lib/",
+    "dist/",
+    "src/",
+    "resources/",
+    "menu/",
+    "cli.js",
+    "index.js"
+  ]
 }
