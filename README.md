@@ -1,17 +1,18 @@
+
 # gh-destroy [![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donations] [![Version](https://img.shields.io/npm/v/gh-destroy.svg)](https://www.npmjs.com/package/gh-destroy) [![Downloads](https://img.shields.io/npm/dt/gh-destroy.svg)](https://www.npmjs.com/package/gh-destroy) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
 
 > Delete multiple GitHub repositories.
 
 ## :cloud: Installation
-    
+
 ```sh
 $ npm i --save gh-destroy
 ```
 
-            
+
 ## :clipboard: Example
 
-        
+
 
 ```js
 const ghDestroy = require("gh-destroy");
@@ -25,9 +26,10 @@ ghDestroy("ghost", "your token", (err, data) => {
     console.log(`Failed to delete ${data.full_name}.`, err);
 });
 ```
-    
+
 ## :memo: Documentation
-        
+
+
 ### `ghDestroy(what, where, token, cb)`
 Deletes the specified repositories in a specified account.
 
@@ -45,14 +47,16 @@ provided, only that specific repository will be deleted.
  - `repo-progress` (err, data): Emitted running the request to a repository (if it was a success, the error will be `null`).
  - `done` (err, data): Emitted after all the requests are executed.
 
-        
+
+
 ## :yum: How to contribute
 Have an idea? Found a bug? See [how to contribute][contributing].
 
+
 ## :scroll: License
-    
+
 [MIT][license] © [Ionică Bizău][website]
-    
+
 [paypal-donations]: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RVXDDLKKLQRJW
 [donate-now]: http://i.imgur.com/6cMbHOC.png
 
