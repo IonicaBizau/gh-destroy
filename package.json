@@ -1,6 +1,6 @@
 {
   "name": "gh-destroy",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Delete multiple GitHub repositories.",
   "main": "lib/index.js",
   "scripts": {
@@ -29,6 +29,7 @@
     "bin/",
     "app/",
     "lib/",
+    "build/",
     "dist/",
     "src/",
     "resources/",
