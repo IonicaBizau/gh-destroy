@@ -1,6 +1,6 @@
 {
   "name": "gh-destroy",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Delete multiple GitHub repositories.",
   "main": "lib/index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "github",
     "repository"
   ],
-  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+  "author": "Ionică Bizău <bizauionica@gmail.com> (https://ionicabizau.net)",
   "license": "MIT",
   "dependencies": {
     "gh-repeat": "^1.0.0",
@@ -29,12 +29,11 @@
     "bin/",
     "app/",
     "lib/",
-    "build/",
     "dist/",
     "src/",
+    "scripts/",
     "resources/",
     "menu/",
-    "scripts/",
     "cli.js",
     "index.js"
   ]
