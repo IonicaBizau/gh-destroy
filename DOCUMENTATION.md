@@ -6,6 +6,7 @@ You can see below the API reference of this module.
 Deletes the specified repositories in a specified account.
 
 #### Params
+
 - **String** `what`: If a GitHub owner (user or organization) is provided, all accesible repositories will be deleted. If a repository full name is
 provided, only that specific repository will be deleted.
 - **String** `where`: The account name where to fork the repositories (your username or an organization).
